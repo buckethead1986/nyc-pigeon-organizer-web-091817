@@ -3,8 +3,8 @@ require 'pry'
 def nyc_pigeon_organizer(data)
   # write your code here!
   output_hash = {}
-  data.each {|data_type, data_value| #iterate through everything. blah blah, used binding.pry to make sure each level was correct.
-      data_value.each {|key, value_array|
+  data.each {|data_type, data_hash| #iterate through everything. blah blah, used binding.pry to make sure each level was correct.
+      data_hash.each {|key, value_array| #I hate these parameter names. Not very descriptive
         value_array.each {|name|
           if !output_hash.include?(name) #if no name_hash in the output hash, make one
             output_hash[name] = {}
